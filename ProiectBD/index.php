@@ -22,7 +22,8 @@
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
 
@@ -238,9 +239,14 @@
 
 
 <script type="text/html" id="buttonsTemplate">
+    <a href="#" class="btn btn-xs btn-default edit_btn">&#x270E Update</a>
+    <a href="#" class="btn btn-xs btn-default remove_btn">&#x2716 Del</a>
+</script>
+
+<!--
     <a href="#" class="btn btn-xs btn-default edit_btn glyphicon glyphicon-edit">&#x270E</a>
     <a href="#" class="btn btn-xs btn-default remove_btn glyphicon glyphicon-remove">&#x2716</a>
-</script>
+-->
 
 <script type="text/html" id="registerTemplate">
     <div class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
@@ -285,14 +291,13 @@
 
 <!-- Plugin JavaScript -->
 <script src="js/jquery.easing.min.js"></script>
-
 <script src="js/scrollEffect.js"></script>
 <!--
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.jsc"></script>
 -->
 
+<script src="js/loginAndRegister.js"></script>
 <script src="js/main.js"></script>
-
 <script src="js/template-engine.js"></script>
 
 </body>

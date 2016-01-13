@@ -45,18 +45,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.923077">
-              <caret line="240" column="92" selection-start-line="240" selection-start-column="92" selection-end-line="240" selection-end-column="92" />
+            <state vertical-scroll-proportion="-6.8461537">
+              <caret line="242" column="73" selection-start-line="242" selection-start-column="73" selection-end-line="242" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doctorAccount.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doctorAccount.html">
+      <file leaf-file-name="adminControls.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/adminControls.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7272727">
-              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+            <state vertical-scroll-proportion="-4.181818">
+              <caret line="45" column="84" selection-start-line="45" selection-start-column="84" selection-end-line="45" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -65,8 +65,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.103448">
-              <caret line="116" column="65" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="65" />
+            <state vertical-scroll-proportion="-7.3103447">
+              <caret line="108" column="39" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -75,57 +75,78 @@
       <file leaf-file-name="queries.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/queries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.418182">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            <state vertical-scroll-proportion="-8.109091">
+              <caret line="213" column="1" selection-start-line="213" selection-start-column="1" selection-end-line="213" selection-end-column="1" />
               <folding>
-                <marker date="1452658273205" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
-                <marker date="1452658273205" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
-                <marker date="1452658273205" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
-                <marker date="1452658273205" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
-                <marker date="1452658273205" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
-                <marker date="1452658273205" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
-                <marker date="1452658273205" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
-                <marker date="1452658273205" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
-                <marker date="1452658273205" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
-                <marker date="1452658273205" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
-                <marker date="1452658273205" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
-                <marker date="1452658273205" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
-                <marker date="1452658273205" expanded="true" signature="3371:3987" placeholder="SELECT P.Pet..." />
-                <marker date="1452658273205" expanded="true" signature="3371:4015" placeholder="SELECT CONCA..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="3705:3805" placeholder="SELECT UD2.U..usercredentials..." />
-                <marker date="1452658273205" expanded="true" signature="4217:4878" placeholder="SELECT CONCA..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="4217:4906" placeholder="SELECT CONCA..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="4639:4839" placeholder="SELECT P.Pet..pets..." />
-                <marker date="1452658273205" expanded="true" signature="5160:5802" placeholder="SELECT CONCA..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="5160:5830" placeholder="SELECT CONCA..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="5530:5630" placeholder="SELECT UD2.U..usercredentials..." />
-                <marker date="1452658273205" expanded="true" signature="5989:6539" placeholder="SELECT P.Pet..." />
-                <marker date="1452658273205" expanded="true" signature="5989:6577" placeholder="SELECT P.Pet..pets..." />
-                <marker date="1452658273205" expanded="true" signature="6139:6259" placeholder="SELECT * fro..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="6738:7283" placeholder="SELECT P.Pet..." />
-                <marker date="1452658273205" expanded="true" signature="6738:7319" placeholder="SELECT P.Pet..pets..." />
-                <marker date="1452658273205" expanded="true" signature="6887:7007" placeholder="SELECT * fro..consultation..." />
-                <marker date="1452658273205" expanded="true" signature="7559:7676" placeholder="INSERT INTO ..." />
+                <marker date="1452719987390" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
+                <marker date="1452719987390" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
+                <marker date="1452719987390" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
+                <marker date="1452719987390" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
+                <marker date="1452719987390" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
+                <marker date="1452719987390" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
+                <marker date="1452719987390" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
+                <marker date="1452719987390" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
+                <marker date="1452719987390" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
+                <marker date="1452719987390" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
+                <marker date="1452719987390" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
+                <marker date="1452719987390" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
+                <marker date="1452719987390" expanded="true" signature="3375:3991" placeholder="SELECT P.Pet..." />
+                <marker date="1452719987390" expanded="true" signature="3375:4019" placeholder="SELECT CONCA..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="3709:3809" placeholder="SELECT UD2.U..usercredentials..." />
+                <marker date="1452719987390" expanded="true" signature="4220:4881" placeholder="SELECT CONCA..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="4220:4909" placeholder="SELECT CONCA..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="4642:4842" placeholder="SELECT P.Pet..pets..." />
+                <marker date="1452719987390" expanded="true" signature="5163:5805" placeholder="SELECT CONCA..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="5163:5833" placeholder="SELECT CONCA..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="5533:5633" placeholder="SELECT UD2.U..usercredentials..." />
+                <marker date="1452719987390" expanded="true" signature="5992:6542" placeholder="SELECT P.Pet..." />
+                <marker date="1452719987390" expanded="true" signature="5992:6580" placeholder="SELECT P.Pet..pets..." />
+                <marker date="1452719987390" expanded="true" signature="6142:6262" placeholder="SELECT * fro..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="6741:7328" placeholder="SELECT P.Pet..." />
+                <marker date="1452719987390" expanded="true" signature="6741:7364" placeholder="SELECT P.Pet..pets..." />
+                <marker date="1452719987390" expanded="true" signature="6913:7052" placeholder="SELECT * fro..consultation..." />
+                <marker date="1452719987390" expanded="true" signature="7601:7718" placeholder="INSERT INTO ..." />
+                <marker date="1452719987390" expanded="true" signature="7964:8105" placeholder="UPDATE ap AS..." />
+                <marker date="1452719987390" expanded="true" signature="8511:8620" placeholder="UPDATE userc..." />
+                <marker date="1452719987390" expanded="true" signature="8511:8681" placeholder="UPDATE userc..." />
+                <marker date="1452719987390" expanded="true" signature="8511:8682" placeholder="UPDATE userc..." />
+                <marker date="1452719987390" expanded="true" signature="8511:8693" placeholder="UPDATE userc..." />
+                <marker date="1452719987390" expanded="true" signature="8517:8620" placeholder="INSERT INTO ..." />
+                <marker date="1452719987390" expanded="true" signature="8874:8901" placeholder="DELETE FROM ..." />
+                <marker date="1452719987390" expanded="true" signature="8874:8919" placeholder="DELETE FROM ..." />
+                <marker date="1452719987390" expanded="true" signature="8874:8926" placeholder="DELETE FROM ..." />
+                <marker date="1452719987390" expanded="true" signature="8880:8901" placeholder="INSERT INTO ..." />
+                <marker date="1452719987390" expanded="true" signature="9066:9119" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7567568">
-              <caret line="510" column="13" selection-start-line="510" selection-start-column="13" selection-end-line="510" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="511" column="1" selection-start-line="511" selection-start-column="1" selection-end-line="511" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userAccount.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userAccount.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/userAccount.html">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2816635">
+              <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doctorAccount.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/doctorAccount.html">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-3.2">
-              <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -137,18 +158,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="46" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bb463-4174-431c-b7a7-97cf595202f1/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-              <folding>
-                <marker date="1452659311435" expanded="true" signature="0:31" placeholder="SELECT * fro..consultation_type..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -181,18 +190,19 @@
         <option value="$PROJECT_DIR$/queries.sql" />
         <option value="$PROJECT_DIR$/php/getUserInfo.php" />
         <option value="$PROJECT_DIR$/php/getUsers.php" />
-        <option value="$PROJECT_DIR$/adminControls.html" />
         <option value="$PROJECT_DIR$/queries.txt" />
         <option value="$PROJECT_DIR$/php/checkLogin.php" />
         <option value="$PROJECT_DIR$/js/jquery_ui.js" />
         <option value="$PROJECT_DIR$/css/jquery-ui.css" />
         <option value="$PROJECT_DIR$/doctorAccount.html" />
-        <option value="$PROJECT_DIR$/userAccount.html" />
-        <option value="$PROJECT_DIR$/php/queries.php" />
+        <option value="$PROJECT_DIR$/js/loginAndRegister.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c09bb463-4174-431c-b7a7-97cf595202f1/console.sql" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/adminControls.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/php/queries.php" />
+        <option value="$PROJECT_DIR$/userAccount.html" />
       </list>
     </option>
   </component>
@@ -257,6 +267,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -285,13 +296,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -365,25 +375,25 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5147059" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22617246" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16490166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5147059" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22012103" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16490166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18683812" sideWeight="0.50653595" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32789558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -426,43 +436,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/queries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <marker date="1452658273205" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
-            <marker date="1452658273205" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
-            <marker date="1452658273205" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="3371:3987" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="3371:4015" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="3705:3805" placeholder="SELECT UD2.U..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="4217:4878" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="4217:4906" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="4639:4839" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="5160:5802" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="5160:5830" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="5530:5630" placeholder="SELECT UD2.U..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="5989:6539" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="5989:6577" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="6139:6259" placeholder="SELECT * fro..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="6738:7283" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="6738:7319" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="6887:7007" placeholder="SELECT * fro..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="7559:7676" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/checkLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -482,7 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,34 +499,45 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding>
-            <marker date="1452658273205" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
-            <marker date="1452658273205" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
-            <marker date="1452658273205" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="3371:3987" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="3371:4015" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="3705:3805" placeholder="SELECT UD2.U..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="4217:4878" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="4217:4906" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="4639:4839" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="5160:5802" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="5160:5830" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="5530:5630" placeholder="SELECT UD2.U..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="5989:6539" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="5989:6577" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="6139:6259" placeholder="SELECT * fro..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="6738:7283" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="6738:7319" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="6887:7007" placeholder="SELECT * fro..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="7559:7676" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
+            <marker date="1452719987390" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
+            <marker date="1452719987390" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
+            <marker date="1452719987390" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
+            <marker date="1452719987390" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
+            <marker date="1452719987390" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="3375:3991" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="3375:4019" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="3709:3809" placeholder="SELECT UD2.U..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="4220:4881" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="4220:4909" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="4642:4842" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="5163:5805" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="5163:5833" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="5533:5633" placeholder="SELECT UD2.U..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="5992:6542" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="5992:6580" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="6142:6262" placeholder="SELECT * fro..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="6741:7328" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="6741:7364" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="6913:7052" placeholder="SELECT * fro..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="7601:7718" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="7964:8105" placeholder="UPDATE ap AS..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8620" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8681" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8682" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8693" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8517:8620" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="8874:8901" placeholder="DELETE FROM ..." />
+            <marker date="1452719987390" expanded="true" signature="8874:8919" placeholder="DELETE FROM ..." />
+            <marker date="1452719987390" expanded="true" signature="8874:8926" placeholder="DELETE FROM ..." />
+            <marker date="1452719987390" expanded="true" signature="8880:8901" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="9066:9119" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -578,7 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -643,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminControls.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31362006">
-          <caret line="32" column="40" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/checkLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33870968">
@@ -764,9 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63013697">
           <caret line="16610" column="37" selection-start-line="16610" selection-start-column="37" selection-end-line="16610" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,7 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09677419">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +752,6 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -795,12 +764,52 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327032">
+          <caret line="23" column="129" selection-start-line="23" selection-start-column="129" selection-end-line="23" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bb463-4174-431c-b7a7-97cf595202f1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/queries.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doctorAccount.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -817,119 +826,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/register.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327032">
-          <caret line="23" column="129" selection-start-line="23" selection-start-column="129" selection-end-line="23" selection-end-column="129" />
-          <folding>
-            <marker date="1452035147913" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..usercredentials..." />
-            <marker date="1452035147913" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c09bb463-4174-431c-b7a7-97cf595202f1/console.sql">
+    <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding>
-            <marker date="1452659311435" expanded="true" signature="0:31" placeholder="SELECT * fro..consultation_type..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2">
-          <caret line="52" column="59" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
+          <caret line="511" column="1" selection-start-line="511" selection-start-column="1" selection-end-line="511" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/queries.php">
+    <entry file="file://$PROJECT_DIR$/js/loginAndRegister.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.418182">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+        <state vertical-scroll-proportion="-6.37931">
+          <caret line="95" column="72" selection-start-line="95" selection-start-column="70" selection-end-line="95" selection-end-column="72" />
           <folding>
-            <marker date="1452658273205" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
-            <marker date="1452658273205" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
-            <marker date="1452658273205" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
-            <marker date="1452658273205" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="3371:3987" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="3371:4015" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="3705:3805" placeholder="SELECT UD2.U..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="4217:4878" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="4217:4906" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="4639:4839" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="5160:5802" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="5160:5830" placeholder="SELECT CONCA..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="5530:5630" placeholder="SELECT UD2.U..usercredentials..." />
-            <marker date="1452658273205" expanded="true" signature="5989:6539" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="5989:6577" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="6139:6259" placeholder="SELECT * fro..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="6738:7283" placeholder="SELECT P.Pet..." />
-            <marker date="1452658273205" expanded="true" signature="6738:7319" placeholder="SELECT P.Pet..pets..." />
-            <marker date="1452658273205" expanded="true" signature="6887:7007" placeholder="SELECT * fro..consultation..." />
-            <marker date="1452658273205" expanded="true" signature="7559:7676" placeholder="INSERT INTO ..." />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.min.css">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="-6.8461537">
+          <caret line="242" column="73" selection-start-line="242" selection-start-column="73" selection-end-line="242" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/doctorAccount.html">
+    <entry file="file://$PROJECT_DIR$/adminControls.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7272727">
-          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+        <state vertical-scroll-proportion="-4.181818">
+          <caret line="45" column="84" selection-start-line="45" selection-start-column="84" selection-end-line="45" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.103448">
-          <caret line="116" column="65" selection-start-line="116" selection-start-column="50" selection-end-line="116" selection-end-column="65" />
+        <state vertical-scroll-proportion="-7.3103447">
+          <caret line="108" column="39" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/queries.txt">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/php/queries.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="-8.109091">
+          <caret line="213" column="1" selection-start-line="213" selection-start-column="1" selection-end-line="213" selection-end-column="1" />
+          <folding>
+            <marker date="1452719987390" expanded="true" signature="133:324" placeholder="SELECT U.use..." />
+            <marker date="1452719987390" expanded="true" signature="431:751" placeholder="SELECT U.fir..." />
+            <marker date="1452719987390" expanded="true" signature="869:1036" placeholder="SELECT CONCA..." />
+            <marker date="1452719987390" expanded="true" signature="1185:1188" placeholder="SELECT CONCA..." />
+            <marker date="1452719987390" expanded="true" signature="1185:1297" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="1185:1298" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="1412:1746" placeholder="SELECT P.Pet..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="1894:1926" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="1894:2137" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="2248:2504" placeholder="SELECT CONCA..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="2617:3176" placeholder="SELECT CONCA..." />
+            <marker date="1452719987390" expanded="true" signature="2957:3106" placeholder="SELECT CONCA..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="3375:3991" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="3375:4019" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="3709:3809" placeholder="SELECT UD2.U..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="4220:4881" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="4220:4909" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="4642:4842" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="5163:5805" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="5163:5833" placeholder="SELECT CONCA..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="5533:5633" placeholder="SELECT UD2.U..usercredentials..." />
+            <marker date="1452719987390" expanded="true" signature="5992:6542" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="5992:6580" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="6142:6262" placeholder="SELECT * fro..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="6741:7328" placeholder="SELECT P.Pet..." />
+            <marker date="1452719987390" expanded="true" signature="6741:7364" placeholder="SELECT P.Pet..pets..." />
+            <marker date="1452719987390" expanded="true" signature="6913:7052" placeholder="SELECT * fro..consultation..." />
+            <marker date="1452719987390" expanded="true" signature="7601:7718" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="7964:8105" placeholder="UPDATE ap AS..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8620" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8681" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8682" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8511:8693" placeholder="UPDATE userc..." />
+            <marker date="1452719987390" expanded="true" signature="8517:8620" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="8874:8901" placeholder="DELETE FROM ..." />
+            <marker date="1452719987390" expanded="true" signature="8874:8919" placeholder="DELETE FROM ..." />
+            <marker date="1452719987390" expanded="true" signature="8874:8926" placeholder="DELETE FROM ..." />
+            <marker date="1452719987390" expanded="true" signature="8880:8901" placeholder="INSERT INTO ..." />
+            <marker date="1452719987390" expanded="true" signature="9066:9119" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/userAccount.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.923077">
-          <caret line="240" column="92" selection-start-line="240" selection-start-column="92" selection-end-line="240" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7567568">
-          <caret line="510" column="13" selection-start-line="510" selection-start-column="13" selection-end-line="510" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.2816635">
+          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
           <folding />
         </state>
       </provider>

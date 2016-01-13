@@ -78,7 +78,7 @@ GROUP BY U.UserID");
 } else if ($_POST['query'] == "consultationHistoryForDoctor") {
     $ownerID = $_POST['ownerID']; //id-ul doctorului din lista de useri
     $query = mysqli_query($database_connection,
-    "SELECT CONCAT(UD.first_name , ' ' , UD.last_name) AS Doctor , p.PetName as `Pet Name` ,
+        "SELECT CONCAT(UD.first_name , ' ' , UD.last_name) AS Doctor , p.PetName as `Pet Name` ,
        CONCAT(UPO.first_name, ' ', UPO.last_name) AS Owner, DATE_FORMAT(C.ConsultationDate,'%d-%m-%Y') as Date
 FROM consultation AS C
   INNER JOIN doctors AS D
@@ -91,7 +91,6 @@ FROM consultation AS C
   INNER JOIN pet_owners as PO ON P.OwnerID = PO.OwnerID
   INNER JOIN usercredentials AS UPO ON PO.UserID = UPO.UserID
 ORDER BY C.ConsultationDate");
-
 
 
 } else if ($_POST['query'] == "consultationsUpcomingForDoctor") {
@@ -151,9 +150,9 @@ FROM pets as P INNER JOIN
 } else if ($_POST['query'] == "upcomingConsultationsForUser") {
     $ownerID = $_POST['ownerID'];
     $query = mysqli_query($database_connection,
-        "SELECT P.PetName , CONCAT(U.first_name,' ',U.last_name) as Doctor , DATE_FORMAT(C.ConsultationDate,'%d-%m-%Y') AS Date
+        "SELECT C.ConsultationID as ID,P.PetName , CONCAT(U.first_name,' ',U.last_name) as Doctor , DATE_FORMAT(C.ConsultationDate,'%d-%m-%Y') AS Date
 FROM pets as P INNER JOIN
-  ( SELECT C1.ConsultationDate , C1.PetID , C1.DoctorID from consultation as C1
+  ( SELECT C1.ConsultationDate , C1.PetID , C1.DoctorID, C1.ConsultationID from consultation as C1
   HAVING  C1.ConsultationDate >= DATE(NOW()) ) as C
     ON C.PetID = P.PetID
   INNER JOIN doctors as D
@@ -165,9 +164,6 @@ INNER JOIN usercredentials U2 on PO.UserID = U2.UserID AND U2.UserID = $ownerID
 ORDER BY C.ConsultationDate");
 
 
-
-
-
 } else if ($_POST['query'] == "AddConsultation") {
     $petid = $_POST['PetID'];
     $doctorid = $_POST['DoctorID'];
@@ -176,13 +172,52 @@ ORDER BY C.ConsultationDate");
     $query = null;
     mysqli_query($database_connection, "INSERT INTO consultation (DoctorID, PetID, ConsultationDate)
 VALUES ($doctorid,$petid, CAST('" . $date . "' AS DATE))");
+
+} else if ($_POST['query'] == "UpdateConsultation") {
+    $petid = $_POST['PetID'];
+    $doctorid = $_POST['DoctorID'];
+    $date = $_POST['Date'];
+    $id = $_POST['ID'];
+
+    $query = null;
+    $query = mysqli_query($database_connection, "UPDATE consultation AS C SET C.DoctorID = '$doctorid',
+    C.PetID = '$petid' , C.ConsultationDate = '$date'
+    WHERE ConsultationID = '$id'");
+    var_dump($query);
+
+} else if ($_POST['query'] == "UpdateUser") {
+
+    $user = $_POST['username'];
+    $newUsername = $_POST['newUsername'];
+    $firstName = $_POST['firstName'];
+    $lastName = $_POST['lastName'];
+    $userType = $_POST['userType'];
+    $password = $_POST['password'];
+    $password = hash('sha256', $password);
+    $query = null;
+
+    $query = mysqli_query($database_connection, "UPDATE usercredentials AS U SET U.username = '$newUsername',
+    U.first_name = '$firstName' , U.last_name = '$lastName' , U.userType = '$userType'
+    WHERE U.username = '$username'");
+    var_dump($query);
+
+} else if ($_POST['query'] == "RemoveUser") {
+    $user = $_POST['user'];
+    var_dump($user);
+    $query = null;
+    mysqli_query($database_connection, "DELETE FROM usercredentials WHERE username = '$user'");
+}
+else if ($_POST['query'] == "RemoveAppointment") {
+    $id = $_POST['id'];
+    $query = null;
+    mysqli_query($database_connection, "DELETE FROM consultation WHERE ConsultationID = '$id'");
 }
 
 
 if ($query) {
     $row = mysqli_fetch_all($query, MYSQLI_ASSOC);
     $data = null;
-    if($row){
+    if ($row) {
         $keys = array_keys($row[0]);
         $data[0] = $keys;
         $data[1] = $row;

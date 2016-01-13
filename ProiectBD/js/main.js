@@ -5,193 +5,116 @@ $(document).ready(function () {
             $("#login-inner-container").hide();
             $('#register-inner-container').show();
         }, 100)
+
+
     });
 
+    /*________________________UPDATE USER________________*/
+    var $body = $('body');
+    $body.on('click', '#usersAdminTable .edit_btn', function () {
+        var user = $(this).closest('tr').children().eq(0).text();
+        console.log(user);
+        var editFirstName = $body.find('#editFirstName').val();
+        var editLastName = $body.find('#editLastName').val();
+        var editUsername = $body.find('#editUsername').val();
+        var editPassword = $body.find('#editPassword').val();
+        var editUserType = $body.find('#editUserType').val();
 
-    /*__________________________LOGIN__________________________*/
-    var loginSection = $('.login-section');
-    var usernameVar;
-    var UserIDVar;
-    $('#loginForm').on('submit', function () {
-        var loginFormValid = true;
-        var usernameInput = $('#usernameInput');
-        var passwordInput = $('#passwordInput');
+        $.post('php/queries.php', {
+            'query': "UpdateUser",
+            'username': user,
+            'newUsername': editUsername,
+            'firstName': editFirstName,
+            'lastName': editLastName,
+            'password': editPassword,
+            'userType': editUserType
 
-        $('.errorMessage').remove();
-
-        if (usernameInput.val().length < 3) {
-            usernameInput.after($("<span class='errorMessage' >Username too short!</span>"));
-            loginFormValid = false;
-        }
-
-        if (passwordInput.val().length < 3) {
-            passwordInput.after($("<span class='errorMessage' >Password too short!</span>"));
-            loginFormValid = false;
-        }
-
-        if (loginFormValid == true) {
-            $.post('php/checkLogin.php',
-                {
-                    username: usernameInput.val(),
-                    password: passwordInput.val()
-                },
-                function (data) {
-                    var dataReceived = $.parseJSON(data);
-                    //$('#postOutput').html(dataReceived.success);
-                    if (dataReceived.success == true) {
-
-                        usernameVar = dataReceived.user;
-                        UserIDVar = dataReceived.UserID;
-                        console.log('UserID : ' + UserIDVar);
-                        console.log("USERNAME : " + usernameVar);
-                        if (dataReceived.usertype == '2') {
-                            loginSection.load('userAccount.html', function () {
-                                console.log($('#consultationDate').datepicker({dateFormat: 'yy-mm-dd'}));
-                            });
-                            loginSection.before($('<h4 class="welcome">Welcome ' + dataReceived.firstname + ' ' + dataReceived.lastname + '</h4>'));
-                            loginSection.trigger("userLogin");
-
-                        }
-
-                        else if (dataReceived.usertype == '1') {
-                            loginSection.load('doctorAccount.html');
-                            loginSection.before($('<h4 class="welcome">Welcome Dr. ' + dataReceived.firstname + ' ' + dataReceived.lastname + '</h4>'));
-                            loginSection.trigger("doctorLogin");
-                        }
-
-                        else if (dataReceived.usertype == '0') {
-
-                            loginSection.before($('<h4 class="welcome">Admin Controls</h4>'));
-                            loginSection.load('adminControls.html');
-                            loginSection.trigger("adminLogin");
-
-                        }
-                        loginSection.css({'padding-top': 0, 'padding-bottom': '250px'});
-                        $('#login-page-scroll').text('My Account');
-                        var $logout = $('#logout-page-scroll');
-                        $logout.removeClass('hidden');
-                        $logout.on('click', function (event) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                            return false;
-                        });
-                    }
-
-                    else {
-
-                        $('#passwordInput').after($("<span class='errorMessage' >Invalid login credentials!</span>"));
-                    }
-
-
-                });
-
-
-        }
-
-        return false;
-    });
-
-    var generateTable = function (table, tableData, isExtended) {
-        var tableThRow = table.find('thead tr');
-        var tableBody = table.find('tbody');
-        tableThRow.empty();
-        tableBody.empty();
-        if(tableData != null){
-            tableData[0].forEach(function (item) {
-                tableThRow.append($('<th>' + item + '</th>'))
-
-            });
-        }
-
-        if (isExtended == true) {
-            tableThRow.append($('<th>' + "Actions" + '</th>'))
-        }
-        tableData[1].forEach(function (item) {
-            var $tableRow = $("<tr></tr>");
-            for (var i = 0; i < tableData[0].length; i++) {
-                var key = tableData[0][i];
-                $tableRow.append($('<td>' + item[key] + '</td>'))
-            }
-
-            if (isExtended == true) {
-                $tableRow.append($('<td>' + tmpl("buttonsTemplate",{}) + '</td>'))
-            }
-            tableBody.append($tableRow);
+        }, function (data) {
+            console.log(data);
+            postRequest({query: "allUsers", table: "usersAdminTable", action: true});
         });
-    };
-
-
-    /*__________________________REGISTER__________________________*/
-
-    $('#registerForm').on('submit', function () {
-        var registerFormValid = true;
-        var firstname = $('#firstNameInputRegister');
-        var lastname = $('#lastNameInputRegister');
-        var user = $('#userInputRegister');
-        var password = $('#passwordInputRegister1');
-        var password2 = $('#passwordInputRegister2');
-
-        $('.errorMessage').remove();
-
-        if (firstname.val().length < 3) {
-            firstname.after($("<span class='errorMessage' >First Name too short!</span>"));
-            registerFormValid = false;
-        }
-
-        if (lastname.val().length < 3) {
-            lastname.after($("<span class='errorMessage' >Last Name too short!</span>"));
-            registerFormValid = false;
-        }
-
-        if (user.val().length < 3) {
-            user.after($("<span class='errorMessage' >Username too short!</span>"));
-            registerFormValid = false;
-        }
-
-        if (password.val().length < 3) {
-            password.after($("<span class='errorMessage' >Password too short!</span>"));
-            registerFormValid = false;
-        }
-
-        if (password.val() != password2.val()) {
-            password.after($("<span class='errorMessage' >Password do not match!</span>"));
-            registerFormValid = false;
-        }
-
-        if (registerFormValid == true) {
-            $.post('php/register.php',
-                {
-                    username: user.val(),
-                    password: password.val(),
-                    firstname: firstname.val(),
-                    lastname: lastname.val()
-                },
-                function (data) {
-                    var dataReceived = $.parseJSON(data);
-                    console.log(data);
-                    //$('#postOutput').html(dataReceived.success);
-                    if (dataReceived.success == false) {
-                        $('.errorMessage').remove();
-                        $('#registerForm').find('button').after($("<span class='errorMessage clearLeft pull-left' >User already exists!</span>"))
-                    }
-
-                    else if (dataReceived.success == true) {
-                        setTimeout(function () {
-                            $("#login-inner-container").show();
-                            $('#register-inner-container').hide();
-                            $("#notRegistered").hide();
-                            $("#usernameInput").val($("#userInputRegister").val());
-                            $("#passwordInput").val($("#passwordInputRegister1").val());
-
-                        }, 100)
-                    }
-                });
-        }
 
         return false;
     });
 
-    /*________________________ON ADMIN LOGIN________________*/
+    $body.on('click', '#usersAdminTable tr', function () {
+        var editFirstNameInput = $body.find('#editFirstName');
+        var editLastNameInput = $body.find('#editLastName');
+        var editUsernameInput = $body.find('#editUsername');
+        var editPasswordInput = $body.find('#editPassword');
+        var editUserType = $body.find('#editUserType');
+
+        editUsernameInput.val($(this).children().eq(0).text());
+        editFirstNameInput.val($(this).children().eq(1).text());
+        editLastNameInput.val($(this).children().eq(2).text());
+        usertype = $(this).children().eq(3).text();
+        if (usertype == 'Admin') {
+            editUserType.val(0);
+        }
+        if (usertype == 'Doctor') {
+            editUserType.val(1);
+        }
+        if (usertype == 'User') {
+            editUserType.val(2);
+        }
+
+        editPasswordInput.val("");
+
+
+    });
+
+    /*________________________REMOVE USER________________*/
+    $body.on('click', '#usersAdminTable .remove_btn', function () {
+        var user = $(this).closest('tr').children().eq(0).text();
+
+        $.post('php/queries.php', {
+            'query': "RemoveUser",
+            'user': user
+        }, function () {
+            postRequest({query: "allUsers", table: "usersAdminTable", action: true});
+        });
+        console.log(user);
+        return false;
+    });
+
+
+    /*________________________UPDATE APPOINTMENT________________*/
+    $body.on('click', '#appointmentsUserTable .edit_btn', function () {
+        var consid = $(this).closest('tr').children().eq(0).text();
+
+        var Pet = $('#consultationPet').val();
+        var Doctor = $('#consultationDoctor').val();
+        var Date = $('#consultationDate').val();
+
+        $.post('php/queries.php', {
+            'query': "UpdateConsultation",
+            'PetID': Pet,
+            'DoctorID': Doctor,
+            'Date': Date,
+            'ID': consid
+        }, function () {
+            postRequest({query: "upcomingConsultationsForUser", table: "appointmentsUserTable", action: true});
+            postRequest({query: "consultationHistoryForUser", table: "recordsUserTable"});
+        });
+
+        return false;
+    });
+
+    /*________________________REMOVE APPOINTMENT________________*/
+    $body.on('click', '#appointmentsUserTable .remove_btn', function () {
+
+        var consid = $(this).closest('tr').children().eq(0).text();
+
+        $.post('php/queries.php', {
+            'query': "RemoveAppointment",
+            'id': consid
+
+        }, function () {
+            postRequest({query: "upcomingConsultationsForUser", table: "appointmentsUserTable", action: true});
+            postRequest({query: "consultationHistoryForUser", table: "recordsUserTable"});
+        });
+        return false;
+    });
 
 
     var postRequest = function (options) {
@@ -200,9 +123,7 @@ $(document).ready(function () {
             action: false,
             callback: function () {
             }
-
         };
-
         $.extend(defaultOptions, options);
 
         $.post('php/queries.php', {query: defaultOptions.query, ownerID: UserIDVar}, function (data) {
@@ -217,7 +138,7 @@ $(document).ready(function () {
         });
     };
 
-
+    /*________________________ON ADMIN LOGIN________________*/
     loginSection.on("adminLogin", function () {
 
         postRequest({query: "allUsers", table: "usersAdminTable", action: true});
@@ -226,12 +147,10 @@ $(document).ready(function () {
         postRequest({query: "allPets", table: "petsAdminTable"});
         postRequest({query: "allAppointments", table: "appointmentsAdminTable"});
     });
-
     /*________________________ON DOCTOR LOGIN________________*/
 
     loginSection.on("doctorLogin", function () {
 
-        //has to be changed!!
         postRequest({query: "consultationHistoryForDoctor", table: "recordsDoctorTable"});
 
         postRequest({
@@ -245,7 +164,7 @@ $(document).ready(function () {
                         $('#futureConsultationsTitle').text("Consultations in interval");
                         $.post('php/queries.php', {
                             query: "consultationsInInterval",
-                            ownerID : UserIDVar,
+                            ownerID: UserIDVar,
                             date1: date1.val(),
                             date2: date2.val()
                         }, function (data) {
@@ -287,7 +206,7 @@ $(document).ready(function () {
         });
 
 
-        postRequest({query: "upcomingConsultationsForUser", table: "appointmentsUserTable" , action: true});
+        postRequest({query: "upcomingConsultationsForUser", table: "appointmentsUserTable", action: true});
         postRequest({query: "consultationHistoryForUser", table: "recordsUserTable"});
 
 
@@ -345,6 +264,39 @@ $(document).ready(function () {
 
 
     });
+
+
+    var generateTable = function (table, tableData, isExtended) {
+        var tableThRow = table.find('thead tr');
+        var tableBody = table.find('tbody');
+        tableThRow.empty();
+        tableBody.empty();
+        if (tableData != null) {
+            tableData[0].forEach(function (item) {
+                tableThRow.append($('<th>' + item + '</th>'))
+
+            });
+        }
+
+        if (isExtended == true) {
+            var $th = $('<th>' + "Actions" + '</th>');
+            tableThRow.append($th);
+        }
+        tableData[1].forEach(function (item) {
+            var $tableRow = $("<tr></tr>");
+            for (var i = 0; i < tableData[0].length; i++) {
+                var key = tableData[0][i];
+                $tableRow.append($('<td>' + item[key] + '</td>'))
+            }
+
+            if (isExtended == true) {
+                var $td = $('<td>' + tmpl("buttonsTemplate", {}) + '</td>');
+                $td.css('width', "150px");
+                $tableRow.append($td)
+            }
+            tableBody.append($tableRow);
+        });
+    };
 
 
 });
