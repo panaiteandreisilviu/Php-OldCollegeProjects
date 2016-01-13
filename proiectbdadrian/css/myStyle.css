@@ -1,0 +1,29 @@
+.marginTop{
+    margin-top:10px;
+
+}
+
+#loginContainer{
+    padding:15px 30px;
+    background-color: white;
+    border-radius: 5px;
+    border:1px solid rgb(5, 145, 131);
+    transition: opacity 0.1s ease-in-out;
+    background-color: rgba(5, 158, 143, 0.3);
+    opacity:0;
+
+}
+
+#datepicker{
+    width:70px;
+}
+
+#numeProgramare{
+    width:120px
+}
+#loginLI:hover #loginContainer{
+    opacity:1;
+}
+
+.banner-bottom-section{
+}

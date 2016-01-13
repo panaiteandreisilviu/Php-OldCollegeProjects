@@ -1,0 +1,68 @@
+@font-face {
+    font-family: futuralight;
+    src: url('../fonts/FuturaStd-Light.woff');
+    
+    src: url('../fonts/FuturaStd-Light.woff.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/FuturaStd-Light.woff.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/FuturaStd-Light.woff.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/FuturaStd-Light.woff.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/FuturaStd-Light.woff.svg#futuralight') format('svg'); /* Legacy iOS */
+    
+}
+
+@font-face {
+    font-family: futuramedium;
+    src: url('../fonts/futurastd-medium-webfont.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/futurastd-medium-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/futurastd-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/futurastd-medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/futurastd-medium-webfont.svg#futuramedium') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: futurabold;
+    src: url('../fonts/futurastd-bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/futurastd-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/futurastd-bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/futurastd-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/futurastd-bold.svg#futurabold') format('svg'); /* Legacy iOS */
+        
+}
+
+
+
+
+@font-face {
+    font-family: 'LigatureSymbols';
+    src: url('../fonts/LigatureSymbols-2.11.eot');
+    src: url('../fonts/LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LigatureSymbols-2.11.woff') format('woff'),
+         url('../fonts/LigatureSymbols-2.11.ttf') format('truetype'),
+         url('../fonts/LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+    src: url('../fonts/LigatureSymbols-2.11.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face{
+    font-family: 'proximanova-bold';
+    src: url('../fonts/proximanova-bold.eot'), /* IE9 Compat Modes */
+         url('../fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/proximanova-bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/proximanova-bold.otf')  format('opentype');
+        
+}
+
+
+@font-face{
+    font-family: 'proximanova-regular';
+    src: url('../fonts/proximanova-regular.eot'), /* IE9 Compat Modes */
+         url('../fonts/proximanova-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/proximanova-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/proximanova-regular.otf')  format('opentype');
+        
+}
+
+
+

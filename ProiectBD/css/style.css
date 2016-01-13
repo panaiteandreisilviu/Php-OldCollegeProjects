@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     width: 100%;
     height: 100%;
@@ -376,4 +370,143 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+
+#postOutput{
+    text-align: left;
+}
+
+.errorMessage{
+    text-align: left;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #b7b7b7;
+    float:left;
+    clear:left;
+    line-height: 40px;
+}
+
+#loginButton{
+    clear:left;
+}
+
+#register-inner-container{
+    display:none;
+}
+
+#tabs-inner-container{
+    text-align: left;
+    padding-top:20px;
+
+}
+
+#tabs-inner-container a{
+    color: #878787;
+
+ }
+
+#tabs-inner-container .nav-tabs>li.active>a{
+    color: black;
+
+}
+
+#tabs-inner-container .nav {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    border-bottom:1px solid #b4b4b4;
+}
+
+#tabs-inner-container .tab-pane{
+    padding-top:20px;
+}
+
+.login-section{
+    transition: padding ,0.3s, ease-in-out;
+}
+.clearLeft{
+    clear:left;
+}
+
+.welcome{
+}
+
+thead{
+    background-color: #202020;
+}
+
+table{
+    margin-top:10px;
+}
+
+tbody tr{
+     background-color: #1C1C1C;
+ }
+
+tbody tr:hover{
+    cursor:hand;
+    cursor:pointer;
+    background-color: #333333;
+}
+
+.login-section .table > tbody > tr > td{
+    border-top:1px solid #aaa;
+    padding-left:10px;
+    box-sizing: border-box;
+    line-height: 20px;
+}
+
+.login-section .table > thead > tr > th{
+    border-bottom:2px solid #aaa;
+    line-height: 22px;
+}
+
+.tabletitle{
+    padding:0;
+    margin:0;
+    margin-top:20px;
+    margin-bottom: 20px;
+    color:#f1f1f1;
+}
+
+hr{
+    padding:0;
+    margin:10px 0 30px 0 ;
+    border:0;
+    border-bottom:1px solid #777777;
+}
+
+#consultationForm{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+.labelMargin{
+    margin:5px 0;
+    margin-left:5px;
+}
+
+.consultationControl{
+    margin-top:10px;
+    margin-left:5px;
+}
+
+.somePaddingTop{
+    padding-top:75px;
+}
+
+#profile{
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+}
+
+#tabs-inner-container .edit_btn{
+    color: #7f7f7f;
+    border:0;
+}
+
+#tabs-inner-container .remove_btn{
+    color: #7f7f7f;
+    border:0;
 }

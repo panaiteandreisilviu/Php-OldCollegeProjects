@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - proiectbd@localhost" uuid="c09bb463-4174-431c-b7a7-97cf595202f1">
+    <database-info product="MySQL" version="5.5.5-10.1.9-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="proiectbd"/>
+    <table name="animals" schema="" catalog="proiectbd" type="TABLE">
+      <column name="Animal_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="AnimalName" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="Animal_ID"/>
+      <exported-key name="AnimalID_FK" table="pets" schema="" catalog="proiectbd" columns="Animal_ID"/>
+    </table>
+    <table name="consultation" schema="" catalog="proiectbd" type="TABLE">
+      <column name="ConsultationID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="DoctorID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="PetID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ConsultationDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="ConsultationID"/>
+      <foreign-key name="ConsultationDoctorID_FK" columns="DoctorID" ref-table="doctors" ref-schema="" ref-catalog="proiectbd" ref-columns="DoctorID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="ConsultationPetID_FK" columns="PetID" ref-table="pets" ref-schema="" ref-catalog="proiectbd" ref-columns="PetID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="ConsultationDetID" table="consultation_details" schema="" catalog="proiectbd" columns="ConsultationID"/>
+    </table>
+    <table name="consultation_details" schema="" catalog="proiectbd" type="TABLE">
+      <column name="ConsultationID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="TypeID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="ConsultationID,TypeID"/>
+      <foreign-key name="ConsultationDetID" columns="ConsultationID" ref-table="consultation" ref-schema="" ref-catalog="proiectbd" ref-columns="ConsultationID" update-rule="0" delete-rule="0" deferrability="2"/>
+      <foreign-key name="ConsultationTypeID" columns="TypeID" ref-table="consultation_type" ref-schema="" ref-catalog="proiectbd" ref-columns="TypeID" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="consultation_type" schema="" catalog="proiectbd" type="TABLE">
+      <column name="TypeID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ConsulationName" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="ConsulationDuration" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MzA="/>
+      <column name="ConsulationCost" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="NTA="/>
+      <primary-key name="PRIMARY" columns="TypeID"/>
+      <exported-key name="ConsultationTypeID" table="consultation_details" schema="" catalog="proiectbd" columns="TypeID"/>
+    </table>
+    <table name="doctors" schema="" catalog="proiectbd" type="TABLE">
+      <column name="DoctorID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="UserID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="DoctorID"/>
+      <foreign-key name="UserIDDoctor_FK" columns="UserID" ref-table="usercredentials" ref-schema="" ref-catalog="proiectbd" ref-columns="UserID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="ConsultationDoctorID_FK" table="consultation" schema="" catalog="proiectbd" columns="DoctorID"/>
+    </table>
+    <table name="pet_owners" schema="" catalog="proiectbd" type="TABLE">
+      <column name="OwnerID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="UserID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="OwnerID"/>
+      <foreign-key name="UserIDPetOwner_FK" columns="UserID" ref-table="usercredentials" ref-schema="" ref-catalog="proiectbd" ref-columns="UserID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="PetOwnerID_FK" table="pets" schema="" catalog="proiectbd" columns="OwnerID"/>
+    </table>
+    <table name="pets" schema="" catalog="proiectbd" type="TABLE">
+      <column name="PetID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="OwnerID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Animal_ID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="PetName" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Color" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="YearOfBirth" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="PetID"/>
+      <foreign-key name="AnimalID_FK" columns="Animal_ID" ref-table="animals" ref-schema="" ref-catalog="proiectbd" ref-columns="Animal_ID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="PetOwnerID_FK" columns="OwnerID" ref-table="pet_owners" ref-schema="" ref-catalog="proiectbd" ref-columns="OwnerID" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="ConsultationPetID_FK" table="consultation" schema="" catalog="proiectbd" columns="PetID"/>
+    </table>
+    <table name="usercredentials" schema="" catalog="proiectbd" type="TABLE">
+      <column name="UserID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="CHAR" precision="64" scale="0" nullable="false" jdbcType="1"/>
+      <column name="first_name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userType" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="Mg=="/>
+      <primary-key name="PRIMARY" columns="UserID"/>
+      <exported-key name="UserIDDoctor_FK" table="doctors" schema="" catalog="proiectbd" columns="UserID"/>
+      <exported-key name="UserIDPetOwner_FK" table="pet_owners" schema="" catalog="proiectbd" columns="UserID"/>
+    </table>
+  </data-source>
+</component>

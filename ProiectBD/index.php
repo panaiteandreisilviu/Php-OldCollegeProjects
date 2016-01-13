@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>PetHelp</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,9 +19,16 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
-          type="text/css">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery_ui.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,7 +53,7 @@
             </a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
@@ -54,13 +61,16 @@
                     <a href="#page-top"></a>
                 </li>
                 <li class="">
-                    <a class="page-scroll" href="#login">Login</a>
+                    <a id="login-page-scroll" class="page-scroll" href="#login">Login</a>
                 </li>
                 <li class="">
                     <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li class="">
                     <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+                <li class="">
+                    <a class="page-scroll hidden" id="logout-page-scroll" href="/ProiectBD">Logout</a>
                 </li>
             </ul>
         </div>
@@ -76,6 +86,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">PetHelp</h1>
+
                     <p class="intro-text">Worried about your pet ? Need some practical advice?
                         PetHelp will take care of your needs.
                     </p>
@@ -92,25 +103,84 @@
 <!-- Login Section -->
 <section id="login" class="content-section text-center">
     <div class="login-section">
+
+
         <div id="login-container" class="container">
-            <div class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
+            <div id="login-inner-container" class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
                 <h2>Login</h2>
-                <form id="loginForm">
+
+                <form id="loginForm" action="php/checkLogin.php" method="POST">
                     <div class="form-group">
-                        <input id="usernameInput" class="form-control" placeholder="Username" type="text">
+                        <input id="usernameInput" class="form-control" name="usernameInput" placeholder="Username"
+                               type="text">
                     </div>
 
                     <div class="form-group">
-                        <input id="passwordInput" class="form-control" placeholder="Password" type="password">
+                        <input id="passwordInput" class="form-control" name="passwordInput" placeholder="Password"
+                               type="password">
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-default pull-left marginRight">Login</button>
+                        <button id="loginButton" type="submit" class="btn btn-default pull-left marginRight">Login
+                        </button>
                         <span id="notRegistered" class="btn btn-default pull-left">Not Registered?</span>
+                    </div>
+                    <br>
+                    <br>
+
+                    <div class="form-group">
+                        <div id="loginValidationErrors"></div>
+                        <div id="postOutput"></div>
                     </div>
                 </form>
             </div>
+
+
+            <div id="register-inner-container" class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
+                <h2>Register</h2>
+
+                <form id="registerForm" action="php/register.php" method="POST">
+
+                    <div class="form-group">
+                        <input type="text" id="firstNameInputRegister" name="firstNameInputRegister"
+                               class="form-control"
+                               placeholder="Your First Name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="lastNameInputRegister" name="lastNameInputRegister" class="form-control"
+                               placeholder="Your Last Name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="userInputRegister" name="userInputRegister" class="form-control"
+                               placeholder="Pick an Username">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="passwordInputRegister1" name="passwordInputRegister1"
+                               class="form-control"
+                               placeholder="Choose a Password">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="passwordInputRegister2" name="passwordInputRegister2"
+                               class="form-control"
+                               placeholder="Re-enter Password">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default pull-left">Register</button>
+                    </div>
+                </form>
+            </div>
+
+
         </div>
+    </div>
+
+
+    </div>
     </div>
 </section>
 
@@ -119,7 +189,8 @@
 <section id="about" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>About PetHelp</h2>
+            <h2 class="somePaddingTop">About PetHelp</h2>
+
             <p>Our mission is to help you provide the best care and attention to your pet, by cutting through the noise
                 and offering you direct advice from verified vets, trainers and other pet experts.
 
@@ -137,6 +208,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Contact Pet Help</h2>
+
             <p>Have Pet Questions? The Pet Help team provides free advice for whatever animal issues you are
                 experiencing.</p>
             <ul class="list-inline banner-social-buttons">
@@ -162,20 +234,43 @@
 <footer>
     <div class="container text-center">
         <p>Copyright © Panaite Andrei - Silviu 2016</p>
-    </div>
 </footer>
 
+
+<script type="text/html" id="buttonsTemplate">
+    <a href="#" class="btn btn-xs btn-default edit_btn glyphicon glyphicon-edit">&#x270E</a>
+    <a href="#" class="btn btn-xs btn-default remove_btn glyphicon glyphicon-remove">&#x2716</a>
+</script>
 
 <script type="text/html" id="registerTemplate">
     <div class="col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
         <h2>Register</h2>
-        <form id="registerForm">
+
+        <form id="registerForm" action="php/register.php" method="POST">
+
             <div class="form-group">
-                <input type="text" id="usernameInputRegister" class="form-control" placeholder=" Pick an Username">
+                <input type="text" id="firstNameInputRegister" name="firstNameInputRegister" class="form-control"
+                       placeholder="Your First Name">
             </div>
 
             <div class="form-group">
-                <input type="password" id="passwordInputRegister" class="form-control" placeholder="Choose a Password">
+                <input type="text" id="lastNameInputRegister" name="lastNameInputRegister" class="form-control"
+                       placeholder="Your Last Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="userInputRegister" name="userInputRegister" class="form-control"
+                       placeholder="Pick an Username">
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="passwordInputRegister1" name="passwordInputRegister1" class="form-control"
+                       placeholder="Choose a Password">
+            </div>
+
+            <div class="form-group">
+                <input type="password" id="passwordInputRegister2" name="passwordInputRegister2" class="form-control"
+                       placeholder="Re-enter Password">
             </div>
 
             <div class="form-group">
@@ -185,19 +280,23 @@
     </div>
 </script>
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="js/jquery.easing.min.js"></script>
 
+<script src="js/scrollEffect.js"></script>
+<!--
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.jsc"></script>
+-->
+
 <script src="js/main.js"></script>
 
 <script src="js/template-engine.js"></script>
 
 </body>
+
+<?php include 'php/databaseConnect.php'; ?>
 
 </html>

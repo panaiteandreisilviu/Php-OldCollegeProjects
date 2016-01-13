@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - salon@localhost" uuid="3bf6584d-1e03-47b3-a863-6c4eb9edbc57">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>salon.*</schema-pattern>
+      <default-schemas>salon.*</default-schemas>
+    </data-source>
+  </component>
+</project>

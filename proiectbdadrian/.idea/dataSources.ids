@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - salon@localhost" uuid="3bf6584d-1e03-47b3-a863-6c4eb9edbc57">
+    <database-info product="MySQL" version="5.5.5-10.1.9-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="salon"/>
+    <table name="angajat" schema="" catalog="salon" type="TABLE">
+      <column name="ID_ANGAJAT" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ID_FUNCTIE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Nume" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Prenume" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID_ANGAJAT"/>
+      <foreign-key name="ANGAJAT_FUNCTIE_ID_FK" columns="ID_FUNCTIE" ref-table="functie" ref-schema="" ref-catalog="salon" ref-columns="ID_FUNCTIE" update-rule="0" delete-rule="3" deferrability="2"/>
+      <exported-key name="DETALII_ANGAJAT_ID_FK" table="detalii_programare" schema="" catalog="salon" columns="ID_ANGAJAT"/>
+    </table>
+    <table name="categorie" schema="" catalog="salon" type="TABLE">
+      <column name="ID_CATEGORIE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Denumire" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID_CATEGORIE"/>
+      <exported-key name="SERVICIU_CATEGORIE_ID_FK" table="serviciu" schema="" catalog="salon" columns="ID_CATEGORIE"/>
+    </table>
+    <table name="client" schema="" catalog="salon" type="TABLE">
+      <column name="ID_CLIENT" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Nume" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Prenume" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Telefon" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID_CLIENT"/>
+      <exported-key name="PROGRAMARE_CLIENT_ID_FK" table="programare" schema="" catalog="salon" columns="ID_CLIENT"/>
+    </table>
+    <table name="detalii_programare" schema="" catalog="salon" type="TABLE">
+      <column name="ID_DETALII_PROGRAMARE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ID_PROGRAMARE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ID_ANGAJAT" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="ID_SERVICIU" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="ID_DETALII_PROGRAMARE"/>
+      <foreign-key name="DETALII_ANGAJAT_ID_FK" columns="ID_ANGAJAT" ref-table="angajat" ref-schema="" ref-catalog="salon" ref-columns="ID_ANGAJAT" update-rule="0" delete-rule="3" deferrability="2"/>
+      <foreign-key name="DETALII_PROGRAMARE_ID_FK" columns="ID_PROGRAMARE" ref-table="programare" ref-schema="" ref-catalog="salon" ref-columns="ID_PROGRAMARE" update-rule="0" delete-rule="3" deferrability="2"/>
+      <foreign-key name="DETALII_SERVICIU_ID_FK" columns="ID_SERVICIU" ref-table="serviciu" ref-schema="" ref-catalog="salon" ref-columns="ID_SERVICIU" update-rule="0" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="functie" schema="" catalog="salon" type="TABLE">
+      <column name="ID_FUNCTIE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="Denumire" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="ID_FUNCTIE"/>
+      <exported-key name="ANGAJAT_FUNCTIE_ID_FK" table="angajat" schema="" catalog="salon" columns="ID_FUNCTIE"/>
+    </table>
+    <table name="programare" schema="" catalog="salon" type="TABLE">
+      <column name="ID_PROGRAMARE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ID_CLIENT" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Data" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="Ora" sqlType="TIME" precision="8" scale="0" nullable="false" jdbcType="92"/>
+      <primary-key name="PRIMARY" columns="ID_PROGRAMARE"/>
+      <foreign-key name="PROGRAMARE_CLIENT_ID_FK" columns="ID_CLIENT" ref-table="client" ref-schema="" ref-catalog="salon" ref-columns="ID_CLIENT" update-rule="0" delete-rule="3" deferrability="2"/>
+      <exported-key name="DETALII_PROGRAMARE_ID_FK" table="detalii_programare" schema="" catalog="salon" columns="ID_PROGRAMARE"/>
+    </table>
+    <table name="serviciu" schema="" catalog="salon" type="TABLE">
+      <column name="ID_SERVICIU" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ID_CATEGORIE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="Denumire" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Durata" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12"/>
+      <column name="Pret" sqlType="DECIMAL" precision="12" scale="0" nullable="false" jdbcType="3"/>
+      <primary-key name="PRIMARY" columns="ID_SERVICIU"/>
+      <foreign-key name="SERVICIU_CATEGORIE_ID_FK" columns="ID_CATEGORIE" ref-table="categorie" ref-schema="" ref-catalog="salon" ref-columns="ID_CATEGORIE" update-rule="0" delete-rule="3" deferrability="2"/>
+      <exported-key name="DETALII_SERVICIU_ID_FK" table="detalii_programare" schema="" catalog="salon" columns="ID_SERVICIU"/>
+    </table>
+  </data-source>
+</component>

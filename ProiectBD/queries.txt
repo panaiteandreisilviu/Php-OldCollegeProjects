@@ -1,0 +1,165 @@
+/*___________________ADMIN_________________________*/
+//                                                 //
+//                                                 //
+//                                                 //
+/*_________________________________________________*/
+
+//ALL USERS
+SELECT U.username as Username,U.first_name as FirstName , U.last_name as LastName,UT.type as UserType
+FROM usercredentials U
+  INNER JOIN usertypes UT
+    ON U.userType = UT.userType
+
+
+
+
+SELECT U.username,U.first_name as FirstName , U.last_name as LastName,U.userType,COUNT(C.ConsultationID) as Consultations , COUNT(PO.PetID)
+FROM usercredentials as U LEFT JOIN doctors as D
+ON U.UserID = D.UserID LEFT JOIN consultation as C
+ON D.DoctorID = C.DoctorID LEFT JOIN (SELECT P1.PetID FROM pet_owners as PO1 INNER JOIN pets AS P1
+                                      ON PO1.OwnerID = P1.OwnerID) as PO
+  ON U.UserID = PO.PetID
+GROUP BY U.username
+
+
+
+
+
+
+//ALL DOCTORS
+//get all doctors and their number of FUTURE consultations[SIMPLE]
+SELECT U.first_name As FirstName , U.last_name as LastName ,U.username As Username ,COUNT(C.ConsultationID) As Consultations
+FROM usercredentials as U INNER JOIN doctors as D
+    ON U.UserID = D.UserID
+  LEFT JOIN consultation as C
+    ON D.DoctorID = C.DoctorID AND c.ConsultationDate >= DATE(NOW())
+GROUP BY D.DoctorID
+
+//GET ALL APPOINTMENTS
+SELECT CONCAT(U.first_name , U.last_name) as Doctor, P.PetName, c.ConsultationDate FROM consultation as C
+  INNER JOIN doctors as D
+    ON c.DoctorID = d.DoctorID
+  INNER JOIN usercredentials as U
+    ON D.UserID = u.UserID
+  INNER JOIN pets as P
+    ON C.PetID = P.PetID
+  INNER JOIN (SELECT CONCAT(U2.first_name , U2.last_name) , PO2.OwnerID as PetOwner FROM usercredentials U2
+    INNER JOIN pet_owners PO2 ON U2.UserID = PO2.UserID) as PO
+    ON P.OwnerID = PO.PetOwner
+
+//get all pets [SIMPLE]
+SELECT P.PetName , U.username , U.first_name , U.last_name
+FROM usercredentials as U INNER JOIN pet_owners as PO
+ON U.UserID = PO.UserID
+INNER JOIN pets as P
+ON P.OwnerID = PO.OwnerID
+
+
+//all pet owners and their number of pets [SIMPLE]
+SELECT CONCAT(U.first_name , ' ' , U.last_name) as OwnerName ,U.username As OwnerUsername ,COUNT(p.PetID) AS Pets
+FROM usercredentials as U INNER JOIN pet_owners as PO
+    ON U.UserID = PO.UserID
+  INNER JOIN pets as P
+    ON P.OwnerID = PO.OwnerID
+GROUP BY U.UserID
+
+//all pets older than a set birthyear [COMPLEX][VARIABLE]
+SELECT P.PetName AS Petname , P.YearOfBirth As BirthYear ,CONCAT(U.first_name, ' ' , U.last_name) As OwnerName ,U.username As OwnerUsername
+FROM usercredentials as U INNER JOIN pet_owners as PO
+ON U.UserID = PO.UserID
+INNER JOIN (SELECT * from  pets WHERE YearOfBirth >= 2009) As P
+ON P.OwnerID = PO.OwnerID
+GROUP BY U.UserID
+
+
+
+
+/*___________________DOCTOR_____________________*/
+//                                              //
+//                                              //
+//                                              //
+/*______________________________________________*/
+
+//CONSULTATION HISTORY
+//get all pets consulted by a doctor in the past[COMPLEX][VARIABLE]
+SELECT P.PetName , CONCAT(U.first_name,' ',U.last_name) as DoctorName , C.ConsultationDate AS 'ConsDate'
+FROM pets as P INNER JOIN
+  (SELECT * from consultation as C1
+  WHERE  C1.ConsultationDate <= DATE(NOW()) ) as C
+    ON C.PetID = P.PetID
+  INNER JOIN doctors as D
+    ON C.DoctorID = D.DoctorID
+  INNER JOIN usercredentials as U
+    ON U.UserID = D.UserID
+
+//FUTURE CONSULTATIONS
+//get future consultations for a doctor[COMPLEX][VARIABLE]
+SELECT D.DoctorName,P.PetName , CONCAT(U.first_name, ' ' , U.last_name) As PetOwner, C.ConsultationDate AS ConsDate
+FROM pets as P INNER JOIN pet_owners as PO
+ON PO.OwnerID = P.OwnerID
+INNER JOIN   (SELECT * from consultation as C1
+  WHERE  C1.ConsultationDate >= DATE(NOW()) ) as C
+    ON C.PetID = P.PetID //SELECTIE PET
+INNER JOIN usercredentials as U
+ON PO.UserID = U.UserID
+INNER JOIN (SELECT CONCAT(U2.first_name , ' ' , u2.last_name) as DoctorName,D2.DoctorID FROM usercredentials as U2
+            INNER JOIN doctors AS D2
+            ON U2.UserID = D2.DoctorID) as D
+ON C.DoctorID = D.DoctorID //SELECTIE DOCTOR
+
+//PETS
+//get all pets[SIMPLE] from ADMIN
+
+//ALL PET OWNERS
+//all pet owners and their number of pets [SIMPLE] from ADMIN
+
+
+
+/*___________________USER_____________________*/
+//                                              //
+//                                              //
+//                                              //
+/*______________________________________________*/
+
+
+//CONSULTATION HISTORY FOR A PET THE USER OWNS
+SELECT P.PetName , CONCAT(U.first_name,' ',U.last_name) as Doctor , C.ConsultationDate AS Date
+FROM pets as P INNER JOIN
+  (SELECT * from consultation as C1
+  HAVING  C1.ConsultationDate <= DATE(NOW()) ) as C
+    ON C.PetID = P.PetID
+  INNER JOIN doctors as D
+    ON C.DoctorID = D.DoctorID
+  INNER JOIN usercredentials as U
+    ON U.UserID = D.UserID
+INNER JOIN pet_owners as PO on P.OwnerID = PO.OwnerID
+INNER JOIN usercredentials U2 on PO.UserID = U2.UserID AND U2.UserID = 5
+
+//ALL PETS A USER OWNS
+
+SELECT P.PetName as `Pet Name` , P.YearOfBirth as `Birth Year`, P.Color FROM pets P
+INNER JOIN pet_owners PO
+ON P.OwnerID = PO.OwnerID AND PO.UserID = 5
+
+//FUTURE APPOINTMENTS FOR OWNER'S PETS
+SELECT P.PetName , CONCAT(U.first_name,' ',U.last_name) as Doctor , C.ConsultationDate AS Date
+FROM pets as P INNER JOIN
+  (SELECT * from consultation as C1
+  HAVING  C1.ConsultationDate >= DATE(NOW()) ) as C
+    ON C.PetID = P.PetID
+  INNER JOIN doctors as D
+    ON C.DoctorID = D.DoctorID
+  INNER JOIN usercredentials as U
+    ON U.UserID = D.UserID
+INNER JOIN pet_owners as PO on P.OwnerID = PO.OwnerID
+INNER JOIN usercredentials U2 on PO.UserID = U2.UserID AND U2.UserID = 5
+
+///GENERATE TABLE FUNCTION USING QUERY TO GENERATE TABLE HEADING
+
+
+
+DELETE FROM animals
+where animals.Animal_ID = 10
+
+UPDATE tabel SET column1 = value , column2 = VALUE
+WHERE column3 = value

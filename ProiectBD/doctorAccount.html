@@ -1,0 +1,57 @@
+<div id="tabs-inner-container" class="col-lg-8 col-lg-offset-2 col-xs-12">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#recordsDoctor" aria-controls="recordsDoctor" role="tab"
+                                                  data-toggle="tab">Records</a></li>
+        <li role="presentation"><a href="#appointmentsDoctor" aria-controls="appointmentsDoctor" role="tab"
+                                   data-toggle="tab">Appointments</a>
+        </li>
+        <li role="presentation"><a href="#petOwnersDoctor" aria-controls="petOwnersDoctor" role="tab"
+                                   data-toggle="tab">Pet Owners</a>
+        </li>
+        <li role="presentation"><a href="#petsDoctor" aria-controls="petsDoctor" role="tab"
+                                   data-toggle="tab">Pets</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane active" id="recordsDoctor">
+            <h5 class="tabletitle">Consultation History</h5>
+            <table id="recordsDoctorTable" class="table table-condensed">
+                <thead><tr></tr></thead>
+                <tbody><tr></tr></tbody>
+            </table>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="appointmentsDoctor">
+            <h5 class="tabletitle" id = "futureConsultationsTitle">Upcoming Consultations</h5>
+            <table id="appointmentsDoctorTable" class="table table-condensed">
+                <thead><tr></tr></thead>
+                <tbody><tr></tr></tbody>
+            </table>
+
+            <div class="form-group form-inline">
+                <input id="doctorAppointmentDate1" class="form-control consultationControl" type="text" placeholder="Consultations From">
+                <input id="doctorAppointmentDate2" class="form-control consultationControl" type="text" placeholder="Consultations To">
+            </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="petOwnersDoctor">
+            <h5 class="tabletitle">All Pet Owners</h5>
+            <table id="petOwnersDoctorTable" class="table table-condensed">
+                <thead><tr></tr></thead>
+                <tbody><tr></tr></tbody>
+            </table>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="petsDoctor">
+            <h5 class="tabletitle">All Pets</h5>
+            <table id="petsDoctorTable" class="table table-condensed">
+                <thead><tr></tr></thead>
+                <tbody><tr></tr></tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
