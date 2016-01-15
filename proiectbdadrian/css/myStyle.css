@@ -3,6 +3,11 @@
 
 }
 
+.moreMarginTop{
+    margin-top:30px;
+
+}
+
 #loginContainer{
     padding:15px 30px;
     background-color: white;
@@ -27,3 +32,16 @@
 
 .banner-bottom-section{
 }
+
+.table tr{
+    background-color: #eeeeee;
+}
+.table th{
+    background-color: #dcdcdc;
+}
+
+.banner-bottom-section .table tbody{
+    height:500px;
+    overflow: scroll;
+}
+

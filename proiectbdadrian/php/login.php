@@ -20,10 +20,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $username = clean_input($_POST["username"]);
     $password = clean_input($_POST["password"]);
+    $angajatLogin =  clean_input($_POST["isAngajat"]);
     $hashedPassword = hash('sha256',$password);
 
-    $query = mysqli_query($database_connection, "SELECT * FROM client WHERE `username` = '$username' AND `password` = '$hashedPassword' ");
-    $row = mysqli_fetch_array($query);
+    if($angajatLogin == "false"){
+        $query = mysqli_query($database_connection, "SELECT * FROM client WHERE `username` = '$username' AND `password` = '$hashedPassword' ");
+        $row = mysqli_fetch_array($query);
+        $response['usertype'] = "2";
+    }
+
+    else{
+        $query = mysqli_query($database_connection, "SELECT * FROM angajat WHERE `username` = '$username' AND `password` = '$hashedPassword' ");
+        $row = mysqli_fetch_array($query);
+        $response['usertype'] = $row[6];
+    }
+
 
     if ($row) {
         start_session($row);

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2016 at 10:50 PM
+-- Generation Time: Jan 15, 2016 at 10:07 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 7.0.0
 
@@ -30,10 +30,6 @@ CREATE TABLE `animals` (
   `Animal_ID` int(11) NOT NULL,
   `AnimalName` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONS FOR TABLE `animals`:
---
 
 --
 -- Dumping data for table `animals`
@@ -64,32 +60,26 @@ CREATE TABLE `consultation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELATIONS FOR TABLE `consultation`:
---   `DoctorID`
---       `doctors` -> `DoctorID`
---   `PetID`
---       `pets` -> `PetID`
---   `DoctorID`
---       `doctors` -> `DoctorID`
---   `PetID`
---       `pets` -> `PetID`
---
-
---
 -- Dumping data for table `consultation`
 --
 
 INSERT INTO `consultation` (`ConsultationID`, `DoctorID`, `PetID`, `ConsultationDate`) VALUES
-(1, 7, 3, '2016-03-12'),
-(2, 7, 3, '2016-02-10'),
-(3, 8, 4, '2016-02-24'),
-(4, 8, 3, '2015-12-16'),
-(5, 8, 3, '2015-11-10'),
-(6, 7, 5, '2015-11-11'),
-(7, 8, 4, '2015-12-14'),
-(8, 7, 5, '2016-02-26'),
-(9, 8, 5, '2016-02-17'),
-(10, 7, 5, '2016-01-29');
+(45, 8, 4, '2016-01-30'),
+(46, 8, 4, '2015-12-08'),
+(47, 8, 3, '2015-12-30'),
+(49, 7, 4, '2016-02-26'),
+(50, 7, 4, '2015-11-09'),
+(51, 8, 3, '2015-12-23'),
+(52, 7, 4, '2016-01-18'),
+(54, 8, 4, '2016-01-11'),
+(55, 8, 4, '2016-01-11'),
+(56, 8, 4, '2016-01-31'),
+(57, 8, 4, '2015-11-09'),
+(58, 8, 4, '2015-11-19'),
+(59, 8, 3, '2015-11-25'),
+(60, 8, 3, '2015-12-22'),
+(61, 7, 3, '2016-01-20'),
+(62, 7, 3, '2016-01-29');
 
 -- --------------------------------------------------------
 
@@ -101,18 +91,6 @@ CREATE TABLE `consultation_details` (
   `ConsultationID` int(11) NOT NULL,
   `TypeID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONS FOR TABLE `consultation_details`:
---   `ConsultationID`
---       `consultation` -> `ConsultationID`
---   `TypeID`
---       `consultation_type` -> `TypeID`
---   `ConsultationID`
---       `consultation` -> `ConsultationID`
---   `TypeID`
---       `consultation_type` -> `TypeID`
---
 
 -- --------------------------------------------------------
 
@@ -126,10 +104,6 @@ CREATE TABLE `consultation_type` (
   `ConsulationDuration` int(11) NOT NULL DEFAULT '30',
   `ConsulationCost` int(11) NOT NULL DEFAULT '50'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONS FOR TABLE `consultation_type`:
---
 
 --
 -- Dumping data for table `consultation_type`
@@ -147,6 +121,33 @@ INSERT INTO `consultation_type` (`TypeID`, `ConsulationName`, `ConsulationDurati
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `detalii_programare`
+--
+
+CREATE TABLE `detalii_programare` (
+  `ID_DETALII_PROGRAMARE` int(11) NOT NULL,
+  `ID_PROGRAMARE` int(11) NOT NULL,
+  `ID_ANGAJAT` int(11) NOT NULL,
+  `ID_SERVICIU` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `detalii_programare`
+--
+
+INSERT INTO `detalii_programare` (`ID_DETALII_PROGRAMARE`, `ID_PROGRAMARE`, `ID_ANGAJAT`, `ID_SERVICIU`) VALUES
+(1, 1, 4, 2),
+(2, 1, 3, 12),
+(3, 2, 7, 4),
+(4, 9, 5, 5),
+(5, 9, 6, 9),
+(6, 10, 5, 23),
+(7, 11, 4, 3),
+(8, 11, 5, 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `doctors`
 --
 
@@ -154,14 +155,6 @@ CREATE TABLE `doctors` (
   `DoctorID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONS FOR TABLE `doctors`:
---   `UserID`
---       `usercredentials` -> `UserID`
---   `UserID`
---       `usercredentials` -> `UserID`
---
 
 --
 -- Dumping data for table `doctors`
@@ -187,18 +180,6 @@ CREATE TABLE `pets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELATIONS FOR TABLE `pets`:
---   `Animal_ID`
---       `animals` -> `Animal_ID`
---   `OwnerID`
---       `pet_owners` -> `OwnerID`
---   `Animal_ID`
---       `animals` -> `Animal_ID`
---   `OwnerID`
---       `pet_owners` -> `OwnerID`
---
-
---
 -- Dumping data for table `pets`
 --
 
@@ -217,14 +198,6 @@ CREATE TABLE `pet_owners` (
   `OwnerID` int(11) NOT NULL,
   `UserID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONS FOR TABLE `pet_owners`:
---   `UserID`
---       `usercredentials` -> `UserID`
---   `UserID`
---       `usercredentials` -> `UserID`
---
 
 --
 -- Dumping data for table `pet_owners`
@@ -251,21 +224,19 @@ CREATE TABLE `usercredentials` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- RELATIONS FOR TABLE `usercredentials`:
---
-
---
 -- Dumping data for table `usercredentials`
 --
 
 INSERT INTO `usercredentials` (`UserID`, `username`, `password`, `first_name`, `last_name`, `userType`) VALUES
-(0, 'root', 'afa2570b98c37809290549ea0f5947248efc20b39dc86ccb0a180e4186ad1414', 'Panaite', 'Andrei', 0),
+(0, 'root', 'a80b568a237f50391d2f1f97beaf99564e33d2e1c8a2e5cac21ceda701570312', 'yyyy', 'yyyy', 0),
 (5, 'ionica1000', 'ace76ee561f1facd93f7297df599dbe76bfd7840ea5233b82b9c861f22b03236', 'Ionescu', 'Gheorghe', 1),
 (6, 'petrica1000', '77f22ac008288a4dfb40f0e5093993db48e468ddd6d8a710e029ebbdb77c84c9', 'Florescu', 'Petrica', 2),
 (7, 'ilie1000', '65bb1cc2fd5feddea98e1d9e3ec89fae2a3f50ed42d6fb96962ef8cd0e2cfcb7', 'Popescu', 'Ilie', 2),
 (9, 'user', '04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb', 'Panaite', 'Andrei', 2),
 (10, 'doctor', '72f4be89d6ebab1496e21e38bcd7c8ca0a68928af3081ad7dff87e772eb350c2', 'Florinescu', 'Andrei', 1),
-(11, 'florin1000', '65bb1cc2fd5feddea98e1d9e3ec89fae2a3f50ed42d6fb96962ef8cd0e2cfcb7', 'Calinescu', 'Florin', 2);
+(11, 'florin1000', '65bb1cc2fd5feddea98e1d9e3ec89fae2a3f50ed42d6fb96962ef8cd0e2cfcb7', 'Calinescu', 'Florin', 2),
+(12, 'iliescu1000', 'a80b568a237f50391d2f1f97beaf99564e33d2e1c8a2e5cac21ceda701570312', 'Iliescu', 'Alexandru', 2),
+(13, 'xxxx', 'b7fb217694ae2d305e766608d250f797daa984e4ac4b5fa638a729be352f2fcd', 'xxxx', 'xxxx', 2);
 
 -- --------------------------------------------------------
 
@@ -277,14 +248,6 @@ CREATE TABLE `usertypes` (
   `userType` tinyint(1) NOT NULL,
   `Type` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- RELATIONS FOR TABLE `usertypes`:
---   `userType`
---       `usercredentials` -> `userType`
---   `userType`
---       `usercredentials` -> `userType`
---
 
 --
 -- Dumping data for table `usertypes`
@@ -328,6 +291,15 @@ ALTER TABLE `consultation_type`
   ADD PRIMARY KEY (`TypeID`);
 
 --
+-- Indexes for table `detalii_programare`
+--
+ALTER TABLE `detalii_programare`
+  ADD PRIMARY KEY (`ID_DETALII_PROGRAMARE`),
+  ADD KEY `ID_PROGRAMARE` (`ID_PROGRAMARE`),
+  ADD KEY `ID_ANGAJAT` (`ID_ANGAJAT`),
+  ADD KEY `ID_SERVICIU` (`ID_SERVICIU`);
+
+--
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
@@ -360,7 +332,7 @@ ALTER TABLE `usercredentials`
 -- Indexes for table `usertypes`
 --
 ALTER TABLE `usertypes`
-  ADD KEY `userType` (`userType`);
+  ADD PRIMARY KEY (`userType`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -375,12 +347,17 @@ ALTER TABLE `animals`
 -- AUTO_INCREMENT for table `consultation`
 --
 ALTER TABLE `consultation`
-  MODIFY `ConsultationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ConsultationID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `consultation_type`
 --
 ALTER TABLE `consultation_type`
   MODIFY `TypeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `detalii_programare`
+--
+ALTER TABLE `detalii_programare`
+  MODIFY `ID_DETALII_PROGRAMARE` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `doctors`
 --
@@ -400,7 +377,7 @@ ALTER TABLE `pet_owners`
 -- AUTO_INCREMENT for table `usercredentials`
 --
 ALTER TABLE `usercredentials`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- Constraints for dumped tables
 --
@@ -439,10 +416,10 @@ ALTER TABLE `pet_owners`
   ADD CONSTRAINT `UserIDPetOwner_FK` FOREIGN KEY (`UserID`) REFERENCES `usercredentials` (`UserID`);
 
 --
--- Constraints for table `usertypes`
+-- Constraints for table `usercredentials`
 --
-ALTER TABLE `usertypes`
-  ADD CONSTRAINT `UserType_FK` FOREIGN KEY (`userType`) REFERENCES `usercredentials` (`userType`);
+ALTER TABLE `usercredentials`
+  ADD CONSTRAINT `usercredentials_ibfk_1` FOREIGN KEY (`userType`) REFERENCES `usertypes` (`userType`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

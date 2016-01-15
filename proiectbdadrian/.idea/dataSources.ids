@@ -49,8 +49,8 @@
     <table name="programare" schema="" catalog="salon" type="TABLE">
       <column name="ID_PROGRAMARE" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="ID_CLIENT" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="Data" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="Ora" sqlType="TIME" precision="8" scale="0" nullable="false" jdbcType="92"/>
+      <column name="DataProgramare" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="Ora" sqlType="VARCHAR" precision="13" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="ID_PROGRAMARE"/>
       <foreign-key name="PROGRAMARE_CLIENT_ID_FK" columns="ID_CLIENT" ref-table="client" ref-schema="" ref-catalog="salon" ref-columns="ID_CLIENT" update-rule="0" delete-rule="3" deferrability="2"/>
       <exported-key name="DETALII_PROGRAMARE_ID_FK" table="detalii_programare" schema="" catalog="salon" columns="ID_PROGRAMARE"/>

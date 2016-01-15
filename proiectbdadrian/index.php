@@ -10,7 +10,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <title>Fashion Hair a Fashion Category Flat Bootstrap Responsive Website Template| Home :: w3layouts</title>
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
     <!-- jQuery (Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery_ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Custom Theme files -->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
@@ -27,16 +28,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             window.scrollTo(0, 1);
         } </script>
     <!--webfont-->
-    <!--
+
     <link href='//fonts.googleapis.com/css?family=Poiret+One|Lily+Script+One|Raleway:400,300,500,600,200,700'
-          rel='stylesheet' type='text/css'> -->
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <!--webfont-->
     <!-- dropdown -->
-    <script src="js/jquery.easydropdown.js"></script>
     <link href="css/nav.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="css/jqueryui.css" rel="stylesheet" type="text/css" media="all"/>
     <script src="js/modernizr.custom.js"></script>
-    <script src="js/jqueryui.js"></script>
 </head>
 <body>
 <div class="banner-bg" id="home">
@@ -121,6 +120,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <!--banner-slide-->
         <script src="js/responsiveslides.min.js"></script>
+        <script src="js/tableGeneration.js"></script>
+        <script src="js/postRequest.js"></script>
+        <script src="js/login.js"></script>
         <script src="js/main.js"></script>
         <script>
             // You can also use "$(window).load(function() {"
@@ -146,7 +148,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!--start-banner-bottom-->
-<div class="banner-bottom-section">
+<div class="banner-bottom-section" id="pageContent">
     <div class="container">
         <div class="banner-bottom-info">
             <div class="col-md-3 b-grids">
@@ -470,23 +472,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
     });
 </script>
-<!--start-smoth-scrolling-->
-<script type="text/javascript">
-    $(document).ready(function () {
-        /*
-         var defaults = {
-         containerID: 'toTop', // fading element id
-         containerHoverID: 'toTopHover', // fading element hover id
-         scrollSpeed: 1200,
-         easingType: 'linear'
-         };
-         */
-
-        $().UItoTop({easingType: 'easeOutQuart'});
-
-    });
-</script>
-<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover"
-                                                                         style="opacity: 1;"> </span></a>
+<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 </body>
 </html>
